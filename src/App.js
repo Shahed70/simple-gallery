@@ -1,19 +1,12 @@
 import "./App.css";
 import data from "./data.json";
 import Gallery from "./Gallery";
-import { useReducer, useState } from "react";
+import { useState } from "react";
 import NavBar from "./NavBar";
 
-const initialState = {
-  data: data,
-};
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+
+
 function App() {
   const [images, setImages] = useState(data);
 
@@ -22,7 +15,7 @@ function App() {
     setImages(newState);
   };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+
 
   return (
     <div className="container">
